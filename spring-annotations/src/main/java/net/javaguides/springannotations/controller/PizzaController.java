@@ -1,13 +1,19 @@
 package net.javaguides.springannotations.controller;
 
+import net.javaguides.springannotations.service.Pizza;
 import net.javaguides.springannotations.service.VegPizza;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PizzaController {
+
+    private Pizza pizza;
     @Autowired
-    private VegPizza vegPizza;
+    public PizzaController(@Qualifier("nonVegPizza") Pizza pizza){
+        this.pizza = pizza;
+    }
 
 //    @Autowired
 //    public PizzaController(VegPizza vegPizza) {
@@ -20,6 +26,6 @@ public class PizzaController {
 
 
     public String getPizza() {
-        return vegPizza.getPizza();
+        return pizza.getPizza();
     }
 }
