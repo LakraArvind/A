@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    @Bean
+    @Bean (name = "VegPizzaBean")
     public Pizza vegPizza() {
         return new VegPizza();
 
