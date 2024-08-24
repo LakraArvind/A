@@ -12,7 +12,7 @@ public class SpringAnnotationsApplication {
 
         var context = SpringApplication.run(SpringAnnotationsApplication.class, args);
 //
-        VegPizza vegPizza = (VegPizza) context.getBean("VegPizzaBean");
+        VegPizza vegPizza = (VegPizza) context.getBean("vegPizza");
         System.out.println(vegPizza.getPizza());
     }
 
