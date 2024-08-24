@@ -11,9 +11,10 @@ public class SpringAnnotationsApplication {
     public static void main(String[] args) {
 
         var context = SpringApplication.run(SpringAnnotationsApplication.class, args);
-//
-        VegPizza vegPizza = (VegPizza) context.getBean("vegPizza");
-        System.out.println(vegPizza.getPizza());
+        PizzaController pizzaController = (PizzaController) context.getBean("pizzaController") ;
+        System.out.println(pizzaController.getPizza());
+//        VegPizza vegPizza = (VegPizza) context.getBean("vegPizza");
+//        System.out.println(vegPizza.getPizza());
     }
 
 }

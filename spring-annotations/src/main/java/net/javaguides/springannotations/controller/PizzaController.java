@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class PizzaController {
 
     private Pizza pizza;
-    @Autowired
+   // @Autowired
     public PizzaController(@Qualifier("nonVegPizza") Pizza pizza){
         this.pizza = pizza;
     }
