@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 public class PizzaController {
 
     private Pizza pizza;
-   // @Autowired
-    public PizzaController(Pizza pizza){
+
+    // @Autowired
+    public PizzaController(Pizza pizza) {
         this.pizza = pizza;
     }
 
@@ -28,10 +29,12 @@ public class PizzaController {
     public String getPizza() {
         return pizza.getPizza();
     }
-    public void init(){
+
+    public void init() {
         System.out.println("Initialization logic");
     }
-    public void destroy(){
+
+    public void destroy() {
         System.out.println("Destruction Logic");
     }
 }

@@ -1,7 +1,7 @@
 package net.javaguides.springannotations.service;
 
 
-public class NonVegPizza implements Pizza{
+public class NonVegPizza implements Pizza {
 
     @Override
     public String getPizza() {
