@@ -17,7 +17,7 @@ public class AppConfig {
     public Pizza nonVegPizza(){
         return  new NonVegPizza() ;
     }
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public PizzaController pizzaController(){
         return new PizzaController(nonVegPizza()) ;
     }
