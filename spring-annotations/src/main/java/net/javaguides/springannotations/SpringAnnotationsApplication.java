@@ -8,6 +8,7 @@ import net.javaguides.springannotations.scope.PrototypeBean;
 import net.javaguides.springannotations.scope.SingletonBean;
 import net.javaguides.springannotations.service.MyService;
 import net.javaguides.springannotations.service.VegPizza;
+import net.javaguides.springannotations.value.ValueAnnotationDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -29,6 +30,9 @@ public class SpringAnnotationsApplication {
         System.out.println(prototypeBean2.hashCode());
         PrototypeBean prototypeBean3 = context.getBean(PrototypeBean.class) ;
         System.out.println(prototypeBean3.hashCode());
+        ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
+        System.out.println(valueAnnotationDemo.getDefaultName());
+
     }
 
 }
