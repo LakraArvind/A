@@ -32,6 +32,11 @@ public class SpringAnnotationsApplication {
         System.out.println(prototypeBean3.hashCode());
         ValueAnnotationDemo valueAnnotationDemo = context.getBean(ValueAnnotationDemo.class);
         System.out.println(valueAnnotationDemo.getDefaultName());
+        System.out.println(valueAnnotationDemo.getHost());
+        System.out.println(valueAnnotationDemo.getEmail());
+        System.out.println(valueAnnotationDemo.getPassword());
+        System.out.println(valueAnnotationDemo.getJavaHome());
+        System.out.println(valueAnnotationDemo.getOs());
 
     }
 
