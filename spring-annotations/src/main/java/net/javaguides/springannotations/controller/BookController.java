@@ -48,6 +48,19 @@ public class BookController {
     @DeleteMapping(value = "/books/delete/{id}")
     public ResponseEntity<String> deleteBook(@PathVariable int id){
         System.out.println(id);
+        Book book = new Book();
+        book.setId(id);
         return ResponseEntity.ok("BOOK DELETED successfully !.");
+    }
+    @GetMapping("/books/{id}/{title}/{description}")
+    public ResponseEntity<Book> pathVariableDemo(@PathVariable int id,
+                                                 @PathVariable("title") String bookTitle,
+                                                 @PathVariable ("description")String bookDescription){
+        System.out.println(id);
+        Book book = new Book();
+        book.setId(id);
+        book.setTitle(bookTitle);
+        book.setDescription(bookDescription);
+        return ResponseEntity.ok(book);
     }
 }
